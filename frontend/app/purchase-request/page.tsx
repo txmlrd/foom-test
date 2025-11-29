@@ -42,6 +42,7 @@ interface PurchaseRequest {
   };
   status: string;
   createdAt: string;
+  quantity_total: number;
 }
 
 export default function PurchaseRequestListPage() {
@@ -222,6 +223,7 @@ export default function PurchaseRequestListPage() {
                       })}
                     >
                       <TableCell sx={(theme) => ({ fontWeight: 600, color: theme.palette.text.primary })}>Reference</TableCell>
+                      <TableCell sx={(theme) => ({ fontWeight: 600, color: theme.palette.text.primary })}>Total Quantity</TableCell>
                       <TableCell sx={(theme) => ({ fontWeight: 600, color: theme.palette.text.primary })}>Warehouse</TableCell>
                       <TableCell sx={(theme) => ({ fontWeight: 600, color: theme.palette.text.primary })}>Status</TableCell>
                       <TableCell sx={(theme) => ({ fontWeight: 600, color: theme.palette.text.primary })}>Created</TableCell>
@@ -260,6 +262,7 @@ export default function PurchaseRequestListPage() {
                           })}
                         >
                           <TableCell sx={(theme) => ({ color: theme.palette.text.primary, fontWeight: 500 })}>{req.reference}</TableCell>
+                          <TableCell sx={(theme) => ({ color: theme.palette.text.primary, fontWeight: 500 })}>{req.quantity_total}</TableCell>
 
                           <TableCell sx={(theme) => ({ color: theme.palette.text.primary })}>{req.Warehouse.name}</TableCell>
 

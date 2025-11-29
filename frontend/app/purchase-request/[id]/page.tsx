@@ -312,7 +312,7 @@ export default function PurchaseRequestDetailPage() {
                             }}
                           />
                         ) : (
-                          <span style={{ fontWeight: 500, color: "#1a202c" }}>{item.quantity}</span>
+                          <span style={{ fontWeight: 500, color: (theme) => theme.palette.text.primary }}>{item.quantity}</span>
                         )}
                       </TableCell>
                     </TableRow>
