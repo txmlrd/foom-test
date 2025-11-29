@@ -185,3 +185,5 @@ Agar stock tidak double update
 ## 🎨 Frontend Improvements
 - hooks, httpclient
 - pecah component , e.g: button, yang mirip-mirip menjadi lebih kecil agar tidak verbose pada 1 file
+
+# Made by Adhi Sanjaya
