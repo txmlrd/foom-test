@@ -187,11 +187,23 @@ exports.getAllPurchaseRequests = async (query) => {
     include: [{ model: PurchaseRequestItem, include: [Product] }, Warehouse],
   });
 
+    const mappedData = data.rows.map((pr) => {
+    const quantity_total = pr.PurchaseRequestItems?.reduce(
+      (sum, item) => sum + item.quantity,
+      0
+    ) || 0;
+
+    return {
+      ...pr.toJSON(),
+      quantity_total,
+    };
+  });
+
   return {
     page,
     total_pages: Math.ceil(data.count / limit),
     total_data: data.count,
-    data: data.rows,
+    data: mappedData,
   };
 };
 
