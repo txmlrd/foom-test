@@ -1,0 +1,58 @@
+# -------------------------------------------------------------
+# GLOBAL / ROOT IGNORE
+# -------------------------------------------------------------
+.DS_Store
+*.pem
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-debug.log*
+
+# Environment files
+.env
+.env.*
+backend/.env
+frontend/.env
+
+# -------------------------------------------------------------
+# NODE MODULES (backend & frontend)
+# -------------------------------------------------------------
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# -------------------------------------------------------------
+# BACKEND (Sequelize, Express)
+# -------------------------------------------------------------
+backend/coverage/
+backend/build/
+backend/tmp/
+backend/dist/
+
+# Sequelize CLI temp
+backend/.sequelize
+backend/.sequelize-auto
+backend/.cache
+
+# -------------------------------------------------------------
+# FRONTEND (Next.js)
+# -------------------------------------------------------------
+frontend/.next/
+frontend/out/
+frontend/next-env.d.ts
+frontend/coverage/
+frontend/.vercel/
+
+# Yarn / PnP
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# TypeScript build info
+**/*.tsbuildinfo
