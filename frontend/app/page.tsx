@@ -75,7 +75,18 @@ export default function Home() {
             </Typography>
           </Box>
 
-          <Grid container spacing={3}>
+          <Box
+            sx={{
+              display: "grid",
+              gridTemplateColumns: {
+                xs: "1fr",
+                sm: "1fr 1fr",
+                md: "1fr 1fr",
+              },
+              gap: 3,
+              alignItems: "stretch",
+            }}
+          >
             {cards.map((card) => {
               const IconComponent = card.icon;
               const isHovered = hoveredCard === card.id;
@@ -203,7 +214,7 @@ export default function Home() {
                 </Grid>
               );
             })}
-          </Grid>
+          </Box>
 
           <Box sx={{ mt: 6, pt: 3, borderTop: `1px solid ${theme.palette.divider}` }}>
             <Typography sx={{ color: theme.palette.text.primary, textAlign: "left" }}>
